@@ -8,7 +8,6 @@ Floating Point Errors
 
 # Cancellation Errors
 
-x = input()
 ''' compute e^-x using taylor's polynomials '''
 for x in (-50, -20, -15, 10, -5 , -1, 1, 5,10, 50, 100, 500, 1000):
 
