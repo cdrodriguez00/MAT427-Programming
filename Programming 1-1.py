@@ -20,3 +20,6 @@ def taylor1(x, n):
 '''
 Relative error = abs(A - An) / abs(A)
 '''
+
+approxe = taylor1(x,n)
+exacte = math.exp(xvals)
