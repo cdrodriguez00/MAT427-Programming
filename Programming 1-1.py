@@ -13,7 +13,7 @@ import math
 def taylor1(x, n):
     xvals = [-50, -20, -15, 10, -5, -1, 1, 5,10, 50, 100, 500, 1000]
     ndegree = [1, 5, 10, 50, 100]
-
+    taylor = 1 +
 
 
 
@@ -21,5 +21,5 @@ def taylor1(x, n):
 Relative error = abs(A - An) / abs(A)
 '''
 
-approxe = taylor1(x,n)
-exacte = math.exp(xvals)
+approxnege = taylor1(x,n)
+exactnege = -math.exp(xvals)
