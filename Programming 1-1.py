@@ -7,3 +7,11 @@ Floating Point Errors
 """
 
 # Cancellation Errors
+
+x = input()
+''' compute e^-x using taylor's polynomials '''
+
+
+'''
+Relative error = abs(A - An) / abs(A)
+'''
