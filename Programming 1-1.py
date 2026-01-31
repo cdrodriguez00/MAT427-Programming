@@ -21,7 +21,9 @@ def taylor1(x=None, n=None):
 
 '''
 Relative error = abs(A - An) / abs(A)
-'''
+
 
 approxnege = taylor1(x,n)
 exactnege = math.exp(-x)
+
+'''
