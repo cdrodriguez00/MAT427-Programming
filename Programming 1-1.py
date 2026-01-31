@@ -10,14 +10,14 @@ Floating Point Errors
 import math
 
 ''' compute e^-x using taylor's polynomials '''
-def taylor1(x, n):
-    xvals = [-50, -20, -15, 10, -5, -1, 1, 5,10, 50, 100, 500, 1000]
-    x = xvals
-    ndegree = [1, 5, 10, 50, 100]
-    n = ndegree
+taylorx = [1, 5, 10, 50, 100, 500, 1000, -1, -5, -10, -15, -20, -50]
+taylorndegree = [1, 5, 10, 50, 100]
+def taylor1(x=None, n=None):
+    if x is None:
+        x = taylorx
+    if n is None:
+        n = taylorndegree
     term = (math.factorial(x))
-
-
 
 '''
 Relative error = abs(A - An) / abs(A)
