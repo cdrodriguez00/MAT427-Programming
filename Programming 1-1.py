@@ -17,7 +17,9 @@ def taylor1(x=None, n=None):
         x = taylorx
     if n is None:
         n = taylorndegree
-    term = (math.factorial(x))
+    for x in x:
+        for n in n:
+            term = (math.factorial(x))
 
 '''
 Relative error = abs(A - An) / abs(A)
