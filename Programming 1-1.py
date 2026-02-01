@@ -19,6 +19,7 @@ a is the center of the expansion = defaulted at 0
 n is the number of terms calculated in the taylor's polynomial
 '''
 
+
 def taylor1(x=None, a=0, n=None):
     taylor = 0
     if x is None:
