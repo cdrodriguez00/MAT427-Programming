@@ -26,9 +26,10 @@ def taylor1(x=taylorx, a=0, n=taylorndegree):
     results = []
     for x in taylorx:
         for n in taylorndegree:
-            taylor = 0
-            for i in range(n +1):
-                taylor += x**i / (math.factorial(i))
+            taylorcalc = 0
+            for i in range(n + 1):
+                taylorcalc += (-x)**i / (math.factorial(i))
+                taylor.append((x, n, taylorcalc))
     return results
 print(taylor1())
 
