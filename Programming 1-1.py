@@ -12,16 +12,23 @@ import math
 ''' compute e^-x using taylor's polynomials '''
 taylorx = [1, 5, 10, 50, 100, 500, 1000, -1, -5, -10, -15, -20, -50]
 taylorndegree = [1, 5, 10, 50, 100]
-def taylor1(x=None, n=None):
+
+'''
+x is where the expansion will be calculated at
+a is the center of the expansion = defaulted at 0
+n is the number of terms calculated in the taylor's polynomial
+'''
+
+def taylor1(x=None, a=0, n=None):
     if x is None:
         x = taylorx
     if n is None:
         n = taylorndegree
     for x in x:
         for n in n:
-            (math.factorial(x))
+            /(math.factorial(x))
 
-
+print(taylor1())
 '''
 Relative error = abs(A - An) / abs(A)
 
