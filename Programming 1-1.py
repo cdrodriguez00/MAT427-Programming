@@ -23,11 +23,11 @@ n is the number of terms calculated in the taylor's polynomial
 '''
 
 def taylor1(x=taylorx, a=0, n=taylorndegree):
-    taylor = 0
-    for x in taylortest:
-        for n in taylorndegreetest:
-            taylor += x**n / (math.factorial(abs(x)))
-    return taylor
+    results = []
+    for x in taylorx:
+        for n in taylorndegree:
+            taylor += x**i / (math.factorial(i))
+    return results
 print(taylor1())
 
 '''
