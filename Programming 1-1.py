@@ -15,7 +15,6 @@ taylorndegree = [1, 5, 10, 50, 100]
 
 taylortest = [1] #testing
 taylorndegreetest = [5] #testing
-
 '''
 x is where the expansion will be calculated at
 a is the center of the expansion = defaulted at 0
@@ -29,7 +28,7 @@ def taylor1(x=taylorx, a=0, n=taylorndegree):
             taylorcalc = 0
             for i in range(n + 1):
                 taylorcalc += (-x)**i / (math.factorial(i))
-                results.append((x, n, taylorcalc))
+            results.append((x, n, taylorcalc))
     return results
 print(taylor1())
 
