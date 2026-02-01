@@ -19,16 +19,12 @@ a is the center of the expansion = defaulted at 0
 n is the number of terms calculated in the taylor's polynomial
 '''
 
-def taylor1(x=None, a=0, n=None):
+def taylor1(x=taylorx, a=0, n=taylorndegree):
     taylor = 0
-    if x is None:
-        x = taylorx
-    if n is None:
-        n = taylorndegree
-    for x in x:
-        for n in n:
-            taylor += x**n / (math.factorial(x))
-
+    for x in taylorx:
+        for n in taylorndegree:
+            taylor += x**n / (math.factorial(abs(x)))
+    return taylor
 print(taylor1())
 
 '''
