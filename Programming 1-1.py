@@ -39,7 +39,8 @@ approxnege = taylor1(x,n)
 exactnege = math.exp(-x)
 
 '''
-
+print(" ")
+print(" ")
 def taylor2(x=taylorx, n=taylorndegree):
     results = []
     for x in taylorx:
