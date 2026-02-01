@@ -20,15 +20,17 @@ n is the number of terms calculated in the taylor's polynomial
 '''
 
 def taylor1(x=None, a=0, n=None):
+    taylor = 0
     if x is None:
         x = taylorx
     if n is None:
         n = taylorndegree
     for x in x:
         for n in n:
-            /(math.factorial(x))
+            taylor += x**n / (math.factorial(x))
 
 print(taylor1())
+
 '''
 Relative error = abs(A - An) / abs(A)
 
