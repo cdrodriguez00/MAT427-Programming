@@ -47,7 +47,7 @@ def taylor2(x=taylorx, n=taylorndegree):
         for n in taylorndegree:
             taylorcalc = 0
             for i in range(n+1):
-                taylorcalc += 1 / ((-x)**i / (math.factorial(1)))
+                taylorcalc += 1 / ((x)**i / (math.factorial(i)))
             results.append((x, n, taylorcalc))
     return results
 
