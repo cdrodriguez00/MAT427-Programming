@@ -17,11 +17,11 @@ taylortest = [1] #testing
 taylorndegreetest = [5] #testing
 '''
 x is where the expansion will be calculated at
-a is the center of the expansion = defaulted at 0
+a is the center of the expansion = defaulted at 0 so not necessary
 n is the number of terms calculated in the taylor's polynomial
 '''
 
-def taylor1(x=taylorx, a=0, n=taylorndegree):
+def taylor1(x=taylorx, n=taylorndegree):
     results = []
     for x in taylorx:
         for n in taylorndegree:
@@ -31,7 +31,7 @@ def taylor1(x=taylorx, a=0, n=taylorndegree):
             results.append((x, n, taylorcalc)) # adds each taylor term calculated for the x and n to its own result
     return results
 
-
+print(taylor1())
 '''
 Relative error = abs(A - An) / abs(A)
 
