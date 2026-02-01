@@ -25,12 +25,12 @@ def taylor1(x=taylorx, a=0, n=taylorndegree):
     results = []
     for x in taylorx:
         for n in taylorndegree:
-            taylorcalc = 0
+            taylorcalc = 0 #taylor calculation originally set to 0
             for i in range(n + 1):
                 taylorcalc += (-x)**i / (math.factorial(i))
-            results.append((x, n, taylorcalc))
+            results.append((x, n, taylorcalc)) # adds each taylor term calculated for the x and n to its own result
     return results
-print(taylor1())
+
 
 '''
 Relative error = abs(A - An) / abs(A)
