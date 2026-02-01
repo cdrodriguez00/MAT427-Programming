@@ -34,7 +34,6 @@ print(taylor1())
 '''
 Relative error = abs(A - An) / abs(A)
 
-
 approxnege = taylor1(x,n)
 exactnege = math.exp(-x)
 
