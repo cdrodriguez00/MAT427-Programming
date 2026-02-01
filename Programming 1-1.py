@@ -13,8 +13,8 @@ import math
 taylorx = [1, 5, 10, 50, 100, 500, 1000, -1, -5, -10, -15, -20, -50]
 taylorndegree = [1, 5, 10, 50, 100]
 
-taylortest = [1]
-taylorndegreetest = [5]
+taylortest = [1] #testing
+taylorndegreetest = [5] #testing
 
 '''
 x is where the expansion will be calculated at
