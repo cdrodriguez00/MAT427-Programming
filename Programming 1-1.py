@@ -25,14 +25,14 @@ def taylor1(x=taylorx, n=taylorndegree):
     results = []
     for x in taylorx:
         for n in taylorndegree:
-            taylorcalc = 0 #taylor calculation originally set to 0
+            taylor_calc = 0 #taylor calculation originally set to 0
             for i in range(n + 1):
-                taylorcalc += (-x)**i / (math.factorial(i))
+                taylor_calc += (-x)**i / (math.factorial(i))
 
-            actualnege = math.exp(-x)
+            actual_nege = math.exp(-x)
 
-            relativeerror = abs(taylorcalc - actualnege) / abs(taylorcalc)
-            results.append((x, n, taylorcalc)) # adds each taylor term calculated for the x and n to its own result
+            relative_error = abs(taylor_calc - actual_nege) / abs(taylor_calc)
+            results.append((x, n, taylor_calc))  # adds each taylor term calculated for the x and n to its own result
     return results
 
 print(taylor1())
@@ -54,14 +54,14 @@ def taylor2(x=taylorx, n=taylorndegree):
                 taylorcalc += x**i / (math.factorial(i))
 
                 if taylorcalc == 0:
-                    taylorreciprical = float('inf')
+                    taylor_reciprical = float('inf')
                 else:
-                    taylorreciprical = 1 / taylorcalc
+                    taylor_reciprical = 1 / taylorcalc
 
-            actualnege = math.exp(-x)
+            actual_nege = math.exp(-x)
 
-            relativeerror = abs(taylorreciprical - actualnege) / abs(taylorreciprical)
-            results.append((x, n, taylorreciprical))
+            relative_error = abs(taylor_reciprical - actual_nege) / abs(taylor_reciprical)
+            results.append((x, n, taylor_reciprical))
     return results
 
 print(taylor2())
