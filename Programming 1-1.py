@@ -49,12 +49,12 @@ exactnege = math.exp(-x)
 print(" ")
 print(" ")
 def taylor2(x=taylorx, n=taylorndegree):
-    results = []
+    results = []   # create empty result list
     for x in taylorx:    # iterates through my x and n lists
         for n in taylorndegree:
             taylorcalc = 0
             for i in range(n+1):
-                taylorcalc += x**i / (math.factorial(i))   # calculates each taylor term and sums to the taylorcalc variable
+                taylorcalc += x**i / (math.factorial(i))   # calculates each taylor term and sums to the taylorcalc variable for each x and n
 
             actual_nege = math.exp(-x)  #actual e^-x
 
