@@ -35,7 +35,7 @@ def taylor1(x=taylorx, n=taylorndegree):
                 relative_error = float("inf")
             else:
                 relative_error = relative_error = abs(taylor_calc - actual_nege) / abs(actual_nege)
-            results.append((x, n, taylor_calc))  # adds each taylor term calculated for the x and n to its own result
+            results.append((x, n, relative_error))  # adds each taylor term calculated for the x and n to its own result
     return results
 
 print(taylor1())
@@ -68,9 +68,16 @@ def taylor2(x=taylorx, n=taylorndegree):
             else:
                 relative_error = relative_error = abs(taylor_reciprical - actual_nege) / abs(actual_nege)
 
-            results.append((x, n, taylor_reciprical))  # adds numbers and result to results list
+            results.append((x, n, relative_error))  # adds numbers and result to results list
     return results
 
 print(taylor2())
 
 
+"""
+Results Discussion:
+
+
+
+
+"""
