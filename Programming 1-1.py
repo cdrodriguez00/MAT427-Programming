@@ -85,7 +85,10 @@ clear direction in increasing or decreasing error.
 
 
 Function 2
-
+For small x, as n increases, relative error decreases. As large x, as n increases. the relative error becomes smaller,
+and inf errors show up "later" than method 1. For "small" negative x, the relative error becomes extremely small as n 
+increases. For "large" negative x, for increasing n, the error approaches 1. Errors for large x are magnitudes smaller
+compared to method 1 as well.
 
 
 
