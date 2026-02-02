@@ -29,7 +29,7 @@ def taylor1(x=taylorx, n=taylorndegree):
             for i in range(n+1):
                 taylor_calc += (-x)**i / (math.factorial(i))
 
-            actual_nege = math.exp(-x)
+            actual_nege = math.exp(-x)  # actual e^-x
 
             if actual_nege == 0 or (actual_nege) < 1e-500:
                 relative_error = float("inf")
@@ -50,25 +50,25 @@ print(" ")
 print(" ")
 def taylor2(x=taylorx, n=taylorndegree):
     results = []
-    for x in taylorx:
+    for x in taylorx:    # iterates through my x and n lists
         for n in taylorndegree:
             taylorcalc = 0
             for i in range(n+1):
-                taylorcalc += x**i / (math.factorial(i))
+                taylorcalc += x**i / (math.factorial(i))   # calculates each taylor term and sums to the taylorcalc variable
 
-            actual_nege = math.exp(-x)
+            actual_nege = math.exp(-x)  #actual e^-x
 
             if taylorcalc == 0: # for error
                 taylor_reciprical = float("inf")
             else:
                 taylor_reciprical = 1 / taylorcalc
 
-            if actual_nege == 0 or abs(actual_nege) < 1e-500:
+            if actual_nege == 0 or abs(actual_nege) < 1e-500:     # more error
                 relative_error = float("inf")
             else:
                 relative_error = relative_error = abs(taylor_reciprical - actual_nege) / abs(actual_nege)
 
-            results.append((x, n, taylor_reciprical))
+            results.append((x, n, taylor_reciprical))  # adds numbers and result to results list
     return results
 
 print(taylor2())
