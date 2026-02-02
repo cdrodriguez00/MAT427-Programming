@@ -28,6 +28,10 @@ def taylor1(x=taylorx, n=taylorndegree):
             taylorcalc = 0 #taylor calculation originally set to 0
             for i in range(n + 1):
                 taylorcalc += (-x)**i / (math.factorial(i))
+
+            actualnege = math.exp(-x)
+
+            relativeerror = abs(taylorcalc - actualnege) / abs(taylorcalc)
             results.append((x, n, taylorcalc)) # adds each taylor term calculated for the x and n to its own result
     return results
 
@@ -53,6 +57,10 @@ def taylor2(x=taylorx, n=taylorndegree):
                     taylorreciprical = float('inf')
                 else:
                     taylorreciprical = 1 / taylorcalc
+
+            actualnege = math.exp(-x)
+
+            relativeerror = abs(taylorreciprical - actualnege) / abs(taylorreciprical)
             results.append((x, n, taylorreciprical))
     return results
 
