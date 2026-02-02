@@ -47,8 +47,13 @@ def taylor2(x=taylorx, n=taylorndegree):
         for n in taylorndegree:
             taylorcalc = 0
             for i in range(n+1):
-                taylorcalc += 1 / ((x)**i / (math.factorial(i)))
-            results.append((x, n, taylorcalc))
+                taylorcalc += x**i / (math.factorial(i))
+
+                if taylorcalc == 0:
+                    taylorreciprical = float('inf')
+                else:
+                    taylorreciprical = 1 / taylorcalc
+            results.append((x, n, taylorreciprical))
     return results
 
 print(taylor2())
