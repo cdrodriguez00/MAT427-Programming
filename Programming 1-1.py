@@ -26,7 +26,7 @@ def taylor1(x=taylorx, n=taylorndegree):
     for x in taylorx:
         for n in taylorndegree:
             taylor_calc = 0 #taylor calculation originally set to 0
-            for i in range(n + 1):
+            for i in range(n+1):
                 taylor_calc += (-x)**i / (math.factorial(i))
 
             actual_nege = math.exp(-x)
