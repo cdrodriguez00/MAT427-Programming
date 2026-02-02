@@ -76,6 +76,15 @@ print(taylor2())
 
 """
 Results Discussion:
+Function 1
+As n increases for a positive x, the error decreases accurately for large n, for small x. For large x, the error becomes 
+extremely large for small n and gets catastrophically bad for large n. This can demonstrate the compounding errors from 
+subtracting large numbers. This gets so large that there are inf errors. For "small" x that are negative, we get errors
+that are small for small and large n. As our x increases, we do not get consistent bounds for error where there is no 
+clear direction in increasing or decreasing error.
+
+
+Function 2
 
 
 
