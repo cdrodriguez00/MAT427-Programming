@@ -30,14 +30,13 @@ def taylor1(x=taylorx, n=taylorndegree):
                 taylor_calc += (-x)**i / (math.factorial(i))
 
             actual_nege = math.exp(-x)
-
-            relative_error = abs(taylor_calc - actual_nege) / abs(taylor_calc)
+            relative_error = abs(taylor_calc - actual_nege) / abs(actual_nege)
             results.append((x, n, taylor_calc))  # adds each taylor term calculated for the x and n to its own result
     return results
 
 print(taylor1())
 '''
-Relative error = abs(A - An) / abs(A)
+Relative error = abs(A - An) / abs(An)
 
 approxnege = taylor1(x,n)
 exactnege = math.exp(-x)
@@ -53,14 +52,18 @@ def taylor2(x=taylorx, n=taylorndegree):
             for i in range(n+1):
                 taylorcalc += x**i / (math.factorial(i))
 
-                if taylorcalc == 0:
-                    taylor_reciprical = float('inf')
-                else:
-                    taylor_reciprical = 1 / taylorcalc
-
             actual_nege = math.exp(-x)
 
-            relative_error = abs(taylor_reciprical - actual_nege) / abs(taylor_reciprical)
+            if taylorcalc == 0: # for error
+                taylor_reciprical = float("inf")
+            else:
+                taylor_reciprical = 1 / taylorcalc
+
+            if abs(actual_nege) < 1e-500:
+                relative_error = float("inf")
+            else:
+                relative_error = relative_error = abs(taylor_reciprical - actual_nege) / abs(actual_nege)
+
             results.append((x, n, taylor_reciprical))
     return results
 
