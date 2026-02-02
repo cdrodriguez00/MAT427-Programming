@@ -31,11 +31,6 @@ def taylor1(x=taylorx, n=taylorndegree):
 
             actual_nege = math.exp(-x)
 
-            if taylor_calc == 0: # for error
-                taylor_reciprical = float("inf")
-            else:
-                taylor_reciprical = 1 / taylor_calc
-
             if abs(actual_nege) < 1e-500:
                 relative_error = float("inf")
             else:
