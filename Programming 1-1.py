@@ -31,7 +31,7 @@ def taylor1(x=taylorx, n=taylorndegree):
 
             actual_nege = math.exp(-x)
 
-            if abs(actual_nege) < 1e-500:
+            if actual_nege == 0 or (actual_nege) < 1e-500:
                 relative_error = float("inf")
             else:
                 relative_error = relative_error = abs(taylor_calc - actual_nege) / abs(actual_nege)
@@ -63,7 +63,7 @@ def taylor2(x=taylorx, n=taylorndegree):
             else:
                 taylor_reciprical = 1 / taylorcalc
 
-            if abs(actual_nege) < 1e-500:
+            if actual_nege == 0 or abs(actual_nege) < 1e-500:
                 relative_error = float("inf")
             else:
                 relative_error = relative_error = abs(taylor_reciprical - actual_nege) / abs(actual_nege)
