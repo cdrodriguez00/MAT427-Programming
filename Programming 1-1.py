@@ -30,7 +30,16 @@ def taylor1(x=taylorx, n=taylorndegree):
                 taylor_calc += (-x)**i / (math.factorial(i))
 
             actual_nege = math.exp(-x)
-            relative_error = abs(taylor_calc - actual_nege) / abs(actual_nege)
+
+            if taylor_calc == 0: # for error
+                taylor_reciprical = float("inf")
+            else:
+                taylor_reciprical = 1 / taylor_calc
+
+            if abs(actual_nege) < 1e-500:
+                relative_error = float("inf")
+            else:
+                relative_error = relative_error = abs(taylor_calc - actual_nege) / abs(actual_nege)
             results.append((x, n, taylor_calc))  # adds each taylor term calculated for the x and n to its own result
     return results
 
