@@ -9,3 +9,5 @@ Horner's Method
 """
 1
 """
+
+def p(a, b, N):
