@@ -10,4 +10,12 @@ Horner's Method
 1
 """
 
-def p(a, b, N):
+def polynomial(p, x):
+    result = 0
+
+    return result
+
+def domain (p, a, b, N):
+    h = (b-a) / N
+
+    D = []
