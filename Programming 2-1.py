@@ -16,6 +16,10 @@ def polynomial(p, x):
     return result
 
 def domain (p, a, b, N):
-    h = (b-a) / N
+    h = (b-a) / N  ### defined h with N as an integer on the interval [a,b]
 
     D = []
+
+    for k in range(N+1):
+        x_k = a + k * h
+        D.append(x_k)
