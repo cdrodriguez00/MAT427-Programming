@@ -11,7 +11,10 @@ Horner's Method
 """
 def polynomial(p, x):
     result = 0
-
+    power = 1
+    for i in range(len(p)):
+        result += p[i] * power
+        power *= x
     return result
 
 def domain(p, a, b, N):
