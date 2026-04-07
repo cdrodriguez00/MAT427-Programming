@@ -9,7 +9,6 @@ Horner's Method
 """
 1
 """
-
 def polynomial(p, x):
     result = 0
 
