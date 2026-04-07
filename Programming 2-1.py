@@ -14,7 +14,7 @@ def polynomial(p, x):
 
     return result
 
-def domain (p, a, b, N):
+def domain(p, a, b, N):
     h = (b-a) / N  ### defined h with N as an integer on the interval [a,b]
 
     D = []
