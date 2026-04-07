@@ -17,6 +17,15 @@ def polynomial(p, x):
         power *= x
     return result
 
+def horner(p,x):
+    N = len(p)-1
+    p_x = p(N)
+
+    for k in range(N-1, -1, -1):
+        p_x = p[k] + p_x * x
+
+    return p_x
+
 def domain(p, a, b, N):
     h = (b-a) / N  ### defined h with N as an integer on the interval [a,b]
     domain_x = []
@@ -25,6 +34,10 @@ def domain(p, a, b, N):
     for k in range(N+1):
         x_k = a + k * h
         domain_x.append(x_k)
-
         px = polynomial(p, x_k)
         polynomial_output.append(px)
+
+
+
+
+
