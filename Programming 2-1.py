@@ -9,6 +9,10 @@ Horner's Method
 """
 1
 """
+
+def exact_polynomial(x):
+    return (x-2) ** 9
+
 def polynomial(p, x):
     result = 0
     power = 1
@@ -26,7 +30,7 @@ def horner(p,x):
 
     return p_x
 
-def domain(p, a, b, N):
+def domain(a, b, N):
     h = (b-a) / N  ### defined h with N as an integer on the interval [a,b]
     domain_x = []
     polynomial_output = []
@@ -36,6 +40,19 @@ def domain(p, a, b, N):
         domain_x.append(x_k)
         px = polynomial(p, x_k)
         polynomial_output.append(px)
+
+
+def maximum_error(p, a, b, N, method):
+    domain_x = domain(a,b, N)
+
+    error = []
+
+    for x in domain_x:
+        exact_value = exact_polynomial(x)
+        approximate_value = method(p,x)
+        error.append(abs(exact_value-approximate_value))
+
+    return max(error)
 
 p = [-512, 2304, -4608, 5376, -4032, 2016, -672, 144, -18, 1]
 a = 1.92
