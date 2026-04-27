@@ -37,6 +37,10 @@ def domain(p, a, b, N):
         px = polynomial(p, x_k)
         polynomial_output.append(px)
 
+p =
+a = 1.92
+b = 2.08
+N = 1000
 
 
 
