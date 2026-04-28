@@ -11,11 +11,12 @@ a = 1.92
 b = 2.08
 N = 1000
 
+def exact_polynomial(x):
+    return (x-2) ** 9
+
 """
 1
 """
-def exact_polynomial(x):
-    return (x-2) ** 9
 
 def standard_polynomial(p, x):
     result = 0
