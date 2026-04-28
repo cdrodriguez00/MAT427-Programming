@@ -29,8 +29,8 @@ def standard_polynomial(p, x):
 2
 """
 def horner(p,x):
-    N = len(p)-1
-    p_x = p[N]
+    n = len(p)-1
+    p_x = p[n]
 
     for k in range(N-1, -1, -1):
         p_x = p[k] + p_x * x
