@@ -67,9 +67,8 @@ def maximum_error(p, a, b, N, method):
 standard_polynomial_error = maximum_error(p,a,b,N, standard_polynomial)
 horner_polynomial_error = maximum_error(p, a, b, N, horner)
 
-print("N = ", N)
-print("1. The maximum error for the standard evaluation function is", standard_polynomial_error)
-print("2. The maximum error for the Horner's evaluation function is", horner_polynomial_error)
+print("1. The maximum error using N=1000 for the standard evaluation function is", standard_polynomial_error)
+print("2. The maximum error using N =1000 for the Horner's evaluation function is", horner_polynomial_error)
 
 
 
