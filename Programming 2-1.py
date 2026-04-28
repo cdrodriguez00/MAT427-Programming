@@ -17,7 +17,6 @@ def exact_polynomial(x):
 """
 1
 """
-
 def standard_polynomial(p, x):
     result = 0
     power = 1
