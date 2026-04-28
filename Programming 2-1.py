@@ -6,6 +6,11 @@ Assignment: Chapter 2.1
 Horner's Method
 """
 
+p = [-512, 2304, -4608, 5376, -4032, 2016, -672, 144, -18, 1]
+a = 1.92
+b = 2.08
+N = 1000
+
 """
 1
 """
@@ -58,10 +63,6 @@ def maximum_error(p, a, b, N, method):
 """
 3
 """
-p = [-512, 2304, -4608, 5376, -4032, 2016, -672, 144, -18, 1]
-a = 1.92
-b = 2.08
-N = 1000
 
 standard_polynomial_error = maximum_error(p,a,b,N, standard_polynomial)
 horner_polynomial_error = maximum_error(p, a, b, N, horner)
