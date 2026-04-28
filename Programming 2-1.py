@@ -51,6 +51,7 @@ def domain(a, b, N):
 
     return domain_x
 
+
 def maximum_error(p, a, b, N, method):
     domain_x = domain(a, b, N)
 
