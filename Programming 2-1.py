@@ -32,7 +32,7 @@ def horner(p,x):
     n = len(p)-1
     p_x = p[n]
 
-    for k in range(N-1, -1, -1):
+    for k in range(n-1, -1, -1):
         p_x = p[k] + p_x * x
 
     return p_x
