@@ -40,16 +40,19 @@ def horner(p,x):
 def domain(a, b, N):
     h = (b-a) / N  ### defined h with N as an integer on the interval [a,b]
     domain_x = []
-    polynomial_output = []
+    numbers = []
 
     for k in range(N+1):
         x_k = a + k * h
         domain_x.append(x_k)
-        px = standard_polynomial(p, x_k)
-        polynomial_output.append(px)
+
+        polynomial_calc = standard_polynomial(p, x_k)
+        numbers.append(polynomial_calc)
+
+    return domain_x
 
 def maximum_error(p, a, b, N, method):
-    domain_x = domain(a,b, N)
+    domain_x = domain(a, b, N)
 
     error = []
 
