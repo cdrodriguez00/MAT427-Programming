@@ -13,7 +13,7 @@ Horner's Method
 def exact_polynomial(x):
     return (x-2) ** 9
 
-def polynomial(p, x):
+def standard_polynomial(p, x):
     result = 0
     power = 1
     for i in range(len(p)):
@@ -42,7 +42,7 @@ def domain(a, b, N):
     for k in range(N+1):
         x_k = a + k * h
         domain_x.append(x_k)
-        px = polynomial(p, x_k)
+        px = standard_polynomial(p, x_k)
         polynomial_output.append(px)
 
 def maximum_error(p, a, b, N, method):
@@ -65,7 +65,8 @@ a = 1.92
 b = 2.08
 N = 1000
 
-
+standard_polynomial_error = maximum_error(p,a,b,N, standard_polynomial)
+horner_polynomial_error = maximum_error(p, a, b, N, horner)
 
 
 
