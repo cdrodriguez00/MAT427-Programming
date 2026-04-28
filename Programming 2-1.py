@@ -21,6 +21,10 @@ def polynomial(p, x):
         power *= x
     return result
 
+
+"""
+2
+"""
 def horner(p,x):
     N = len(p)-1
     p_x = p(N)
@@ -41,7 +45,6 @@ def domain(a, b, N):
         px = polynomial(p, x_k)
         polynomial_output.append(px)
 
-
 def maximum_error(p, a, b, N, method):
     domain_x = domain(a,b, N)
 
@@ -54,10 +57,17 @@ def maximum_error(p, a, b, N, method):
 
     return max(error)
 
+"""
+3
+"""
 p = [-512, 2304, -4608, 5376, -4032, 2016, -672, 144, -18, 1]
 a = 1.92
 b = 2.08
 N = 1000
+
+
+
+
 
 
 
