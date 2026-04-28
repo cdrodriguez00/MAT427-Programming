@@ -9,7 +9,6 @@ Horner's Method
 """
 1
 """
-
 def exact_polynomial(x):
     return (x-2) ** 9
 
@@ -20,7 +19,6 @@ def standard_polynomial(p, x):
         result += p[i] * power
         power *= x
     return result
-
 
 """
 2
