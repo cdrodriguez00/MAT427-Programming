@@ -55,7 +55,7 @@ def maximum_error(p, a, b, N, method):
 
     for x in domain_x:
         exact_value = exact_polynomial(x)
-        approximate_value = method(p,x)
+        approximate_value = method(p, x)
         error.append(abs(exact_value-approximate_value))
 
     return max(error)
