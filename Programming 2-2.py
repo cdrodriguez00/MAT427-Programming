@@ -16,6 +16,10 @@ def backward_diff_quotient(f, x, h):
 def central_diff_quotient(f, x, h):
     return (f(x+h)-f(x-h)) / h
 
+def better_foward_diff_quotient(f, x, h):
+    return(f(x + 2*h) - f(x)) / 2*h
+
+
 
 
 
