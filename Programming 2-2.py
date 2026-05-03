@@ -19,6 +19,9 @@ def central_diff_quotient(f, x, h):
 def better_foward_diff_quotient(f, x, h):
     return(f(x + 2*h) - f(x)) / 2*h
 
+def derivative_approx (f,x, h):
+    2*forward_diff_quotient(f,x,h) - better_foward_diff_quotient(f,x,h)
+
 
 
 
